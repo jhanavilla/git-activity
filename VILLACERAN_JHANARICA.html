@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Basic Calculator</title>
+
+<style>
+    body {
+        margin: 0;
+        height: 100vh;
+        background: #ffffff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: Arial, sans-serif;
+    }
+
+    .card {
+        background-color: #ffffff;
+        width: 380px;
+        padding: 30px;
+        border-radius: 12px;
+        text-align: center;
+        box-shadow: 0 0 10px rgba(0,0,0,0.2);
+        border: 1px solid #000;
+    }
+
+    h2, p {
+        color: #000;
+    }
+
+    .output-box {
+        margin: 20px 0;
+        padding: 20px;
+        min-height: 60px;
+        border: 2px dashed #000;
+        font-size: 26px;
+        font-weight: bold;
+        color: #000;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .btns {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 12px;
+        margin-top: 10px;
+    }
+
+    button {
+        padding: 15px;
+        font-size: 20px;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        background-color: #006400;
+        color: #ffffff;
+    }
+
+    button:hover {
+        background-color: #004d00;
+    }
+</style>
+</head>
+
+<body>
+
+<div class="card">
+    <h2>Basic Calculator</h2>
+
+    <p><b>Declare Variable 5 and 7 to use on calculator</b></p>
+
+    <p><b>Output Here!</b></p>
+    <div id="output" class="output-box">---</div>
+
+    <div class="btns">
+        <button onclick="add()">+</button>
+        <button onclick="subtract()">−</button>
+        <button onclick="multiply()">×</button>
+        <button onclick="divide()">÷</button>
+    </div>
+</div>
+
+<script>
+    // Declare variables
+    let x = 5;
+    let y = 7;
+
+    function add() {
+        document.getElementById("output").innerHTML = x + y;
+    }
+
+    function subtract() {
+        document.getElementById("output").innerHTML = x - y;
+    }
+
+    function multiply() {
+        document.getElementById("output").innerHTML = x * y;
+    }
+
+    function divide() {
+        document.getElementById("output").innerHTML = x / y;
+    }
+</script>
+
+</body>
+</html>
